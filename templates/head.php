@@ -15,7 +15,7 @@
 
 <div class="universe">
 
-  <?php do_action('get_header'); ?>
-  <?php get_template_part('templates/header'); ?>
+<?php do_action('get_header'); ?>
+<?php get_template_part('templates/header'); ?>
 
 <div class="galaxy">
