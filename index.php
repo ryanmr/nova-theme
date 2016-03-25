@@ -1,11 +1,24 @@
 <?php get_template_part('templates/head'); ?>
 
-<!-- search form -->
+<?php do_action('get_before_world'); ?>
 
-<?php while (have_posts()) : the_post(); ?>
-<?php get_template_part('templates/content', get_post_format()); ?>
-<?php endwhile; ?>
+<main class="world">
+  <div class="world-container">
 
-<!-- paginate -->
+    <div class="content-wrapper">
 
-<?php get_template_part('templates/footer');
+
+      <?php while (have_posts()) : the_post(); ?>
+        <?php get_template_part('templates/content', get_post_format()); ?>
+      <?php endwhile; ?>
+
+    </div>
+
+    <?php get_template_part('templates/loop-navigation'); ?>
+
+  </div>
+</main><!-- /world -->
+
+<?php do_action('get_after_world'); ?>
+
+<?php get_template_part('templates/footer'); ?>

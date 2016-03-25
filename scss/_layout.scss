@@ -1,0 +1,113 @@
+
+
+/*
+================================================================================
+                                    LAYOUT
+================================================================================
+*/
+
+
+.header-container,
+.identity-container,
+.top-bar-container,
+.world-container,
+.footer-container,
+.world-container .article-container,
+.post-navigation-container
+ {
+	transition: width 0.5s;
+	-webkit-transition: width 0.5;
+}
+
+.header-container {
+  @include grid-row();
+}
+
+.identity-container {
+  @include grid-column($columns: 24);
+}
+
+.top-bar-container {
+  @include grid-column($columns: 24);
+}
+
+.world-container {
+  @include grid-row();
+}
+
+.world-container .article-container {
+  @include grid-column($columns: 24, $center: true);
+}
+
+.post-navigation-container {
+  @include grid-column($columns: 22, $center: true);
+}
+
+.page-template-front-page-php .world-container .links {
+  @include grid-column($columns: 12);
+}
+
+.page-template-front-page-php .world-container .standard {
+  @include grid-column($columns: 12);
+}
+
+.footer-container {
+	@include grid-row();
+}
+
+.footer-container {
+
+  .widget-count-1 .widget  {
+    @include grid-column($columns: 24);
+  }
+
+  .endpoint {
+    @include grid-column($columns: 24);
+  }
+
+}
+
+
+@media #{$medium-up} {
+
+	.identity-container {
+	  @include grid-column($columns: 9, $push: 1);
+	}
+
+	.top-bar-container {
+	  @include grid-column($columns: 13, $pull: 1);
+	}
+
+	.top-bar-menu {
+  		@extend .right;
+	}
+
+	.world-container .article-container {
+	  @include grid-column($columns: 22, $center: true);
+	}
+
+}
+
+@media #{$large-up} {
+
+	.identity-container {
+	  @include grid-column($columns: 10, $push: 0);
+	}
+
+	.top-bar-container {
+	  @include grid-column($columns: 14, $pull: 0);
+	}
+
+	// .home .world-container .article-container {
+	//   @include grid-column($columns: 12);
+	// }
+
+	// .home .world-container .format-standard .article-container {
+	//   @include grid-column($columns: 24);
+	// }
+
+	.world-container .article-container {
+	  @include grid-column($columns: 20, $center: true);
+	}
+
+}

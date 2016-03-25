@@ -1,0 +1,54 @@
+
+.dark {
+
+	color: #ddd;
+
+	.galaxy {
+		background-color: #222;
+	}
+
+	a {
+		color: #C0C0C0;
+		&:hover {
+			color: #C7C7C7;
+		}
+		&:visited {
+			color: #DFE3E3;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #ddd;
+		a:hover {
+			text-decoration: none;
+		}
+	}
+
+	code {
+		color: #ccc;
+		background-color: #070707;
+		border: #202020;
+	}
+
+	.entry-content {
+		blockquote {
+			color: #A9A9A9;
+		}
+
+		a {
+			color: #099CDC;
+			&:hover {color: #2CACE4;}
+			&:visited {color: #0478AA;}
+		}
+
+	}
+
+	.wp-caption-text {
+		color: #BBB;
+	}
+
+	.entry-footer {
+		border-color: #888888;
+	}
+
+}

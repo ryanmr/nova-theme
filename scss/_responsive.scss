@@ -1,0 +1,74 @@
+
+
+/*
+================================================================================
+                                    RESPONSIVE STYLES
+================================================================================
+*/
+
+
+.world {
+  font-size: rem-calc(18px);
+}
+
+
+@media #{$medium-up} {
+
+  .site-title {
+    text-align: left;
+  }
+
+  .entry-title {
+  	font-size: rem-calc(25px);
+  }
+
+  .category-chronicles .entry-title {
+  	font-size: rem-calc(26px);
+  }
+
+  .post-navigation {
+    font-size: rem-calc(28px);
+  }
+
+  .world {
+    font-size: rem-calc(19px);
+  }
+
+  .world .post {
+    margin-top: emCalc(64px);
+  }
+
+}
+
+@-webkit-keyframes arrow-pulse {
+  0% {}
+  100% {left: rem-calc(39px);color: #666;}
+}
+@-moz-keyframes arrow-pulse {
+  0% {}
+  100% {left: rem-calc(39px);color: #666;}
+}
+@-o-keyframes arrow-pulse {
+  0% {}
+  100% {left: rem-calc(39px);color: #666;}
+}
+@keyframes arrow-pulse {
+  0% {}
+  100% {left: rem-calc(39px);color: #666;}
+}
+
+@media #{$large-up} {
+
+  .format-link:hover .entry-title {
+
+    &:after {
+      -webkit-animation: arrow-pulse 1s linear 0s infinite;
+      -moz-animation: arrow-pulse 1s linear 0s infinite;
+      -o-animation: arrow-pulse 1s linear 0s infinite;
+      animation: arrow-pulse 1s linear 0s infinite;
+    }
+
+  }
+
+
+}

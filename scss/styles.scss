@@ -1,0 +1,398 @@
+
+
+* { @include box-sizing(border-box); }
+
+html {
+	background-color: #222;
+}
+
+body {
+
+  background-color: #222;
+  color: #222;
+
+}
+
+a {
+	color: #303030;
+	text-decoration: none;
+	&:hover {
+		color: #383838;
+		text-decoration: underline;
+	}
+	&:visited {
+		color: #201C1C;
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "nimbus-sans" ,"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  line-height: 1.4;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+}
+
+code {
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  font-weight: normal;
+  color: #333333;
+  background-color: #f8f8f8;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dfdfdf;
+  padding: 0.125rem 0.3125rem 0.0625rem;
+}
+
+
+.galaxy {
+  background-color: #fff;
+
+  padding-top: 1em;
+}
+
+
+/*
+================================================================================
+                                    HEADER
+================================================================================
+*/
+
+.header {
+  color: #fff;
+  padding-top: emCalc(48px);
+  padding-bottom: emCalc(48px);
+  border-bottom: emCalc(1px) solid #222;
+}
+
+.admin-bar .header {
+    padding-top: emCalc(60px);
+}
+
+.site-title, .site-description {
+  text-transform: uppercase;
+  letter-spacing: emCalc(3px);
+  font-size: emCalc(32px);
+  line-height: emCalc(22px);
+  color: #fff;
+  text-shadow: emCalc(1px) emCalc(1px) emCalc(1px) rgba(0,0,0,.4);
+  margin: 0;
+}
+
+.site-title {
+  font-size: emCalc(64px);
+  line-height: emCalc(52px);
+  font-family: 'LeagueGothicRegular', Helvetica, Arial, san-serif;
+  font-weight: normal;
+  text-align: center;
+
+  a {
+    color: #eee;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #fff;
+  }
+}
+
+.site-description {
+  margin-top: emCalc(2px);
+  font-size: emCalc(24px);
+  letter-spacing: normal;
+  line-height: normal;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+
+/*
+================================================================================
+                                    TOP MENU
+================================================================================
+*/
+
+
+.top-bar-container {
+  margin-top: emCalc(8px);
+}
+
+section.top-bar-section .divider:first-child {
+  display: none;
+}
+
+
+
+
+/*
+================================================================================
+                                    CONTENT / WORLD
+================================================================================
+*/
+
+.world {
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+.world .post {
+  margin-top: emCalc(80px);
+}
+
+.world .post:first-child  {
+  margin-top: 0;
+}
+
+.entry-header {
+  margin-bottom: 1em;
+}
+
+.entry-title {
+  font-size: rem-calc(24px);
+  margin: 0.67em 0;
+  margin-bottom: 0;
+  line-height: 1.25em;
+}
+
+.category-chronicles .entry-title,
+.category-featured .entry-title {
+  font-size: rem-calc(25px);
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+.format-link .entry-title {
+
+  a {
+    color: #CB1212;
+    text-decoration: none;
+    &:visited {color: #A10303;}
+    &:hover {color: #EC3434;}
+  }
+
+  &:after {
+    content: "→";
+    color: #aaa;
+    position: relative;
+    left: rem-calc(13px);
+  }
+
+}
+
+.entry-meta .permalink,
+.entry-footer {
+
+  color: #777;
+
+  a {
+    color: #777;
+    text-decoration: none;
+    &:visited {color: #777;}
+    &:hover {color: #787878; text-decoration: underline;}
+  }
+}
+
+.entry-meta .permalink {
+  font-size: 1.4rem;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  position: relative;
+  line-height: 0.5rem;
+}
+
+.entry-meta {
+  margin: 0;
+  font-size: rem-calc(16px);
+  color: #777;
+}
+
+.entry-footer {
+  font-size: 0.85em;
+  border-top: 1px solid #ddd;
+  margin-top: rem-calc(32px);
+  padding: 1em 0 1em 0;
+}
+
+.entry-content {
+
+  font-family: "Segoe UI", 'Open Sans', sans-serif;
+  line-height: 1.6em;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  h1 {font-size: 1.35em;}
+  h2 {font-size: 1.30em;}
+  h3 {font-size: 1.25em;}
+  h4 {font-size: 1.20em;}
+  h5 {font-size: 1.10em;}
+  h6 {font-size: 1.00em;}
+
+  sup, .footnote {
+    font-size: .8em;
+    color: #222;
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+  }
+  .footnote {
+    vertical-align: super;
+  }
+
+  .footnotes {
+    font-size: rem-calc(16px);
+  }
+
+  blockquote {
+    margin: 0 emCalc(18px) emCalc(18px) emCalc(18px);
+    color: #565656;
+    padding-left: emCalc(10px);
+    border-left: emCalc(4px) solid #ddd;
+  }  
+
+  code, pre {
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  a {
+    color: #099CDC;
+    text-decoration: underline;
+    &:hover {color: #2CACE4; text-decoration: underline;}
+    &:visited {color: #0478AA;}
+  }
+
+}
+
+.entry-content {
+  /*
+    via http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+  */
+  -ms-word-break: break-all;
+
+  /* Be VERY careful with this, breaks normal words wh_erever */
+  // word-break: break-all;
+
+  /* Non standard for webkit */
+  word-break: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+
+.wp-caption {
+  max-width: 100%;
+}
+
+.wp-caption-text {
+  color: #444;
+
+  line-height: rem-calc(16px);
+  font-size: rem-calc(14px);
+
+  margin-top: 0;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+blockquote.alignleft,
+img.alignleft {
+  margin: rem-calc(7) rem-calc(24) rem-calc(7) 0;
+}
+
+.wp-caption.alignleft {
+  margin: rem-calc(7) rem-calc(14) rem-calc(7) 0;
+}
+
+blockquote.alignright,
+img.alignright {
+  margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
+}
+
+
+
+
+/*
+================================================================================
+                                    POST NAVIGATION
+================================================================================
+*/
+
+.post-navigation {
+  font-size: rem-calc(18px);
+  padding: .8em 0 0em 0;
+  margin-bottom: 1em;
+  @include clearfix();
+
+  a:hover {
+    text-decoration: none;
+  }
+
+}
+
+.post-previous, .post-next {
+  line-height: 1.5em;
+}
+
+.post-previous {
+  float: left;
+}
+.post-next {
+  float: right;
+}
+
+
+/*
+================================================================================
+                                    FOOTER / WIDGETS
+================================================================================
+*/
+
+.footer {
+
+  padding-top: 2em;
+  padding-bottom: 4em;
+
+  font-size: .85em;
+  
+  color: #ccc;
+
+  a {
+    color: #ccc;
+    text-decoration: underline;
+    &:hover {color: #fff; text-decoration: underline;}
+    &:visited {color: #cdcdcd;}
+  }
+
+}
+
+.endpoint {
+  text-align: center;
+}
+
+.widget_nav_menu { 
+  text-align: center;
+  ul {
+    list-style: none;
+    @include inline-list;
+    display: inline-block; float: none
+  }
+}
